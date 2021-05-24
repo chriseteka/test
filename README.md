@@ -19,3 +19,7 @@ The following endpoints are available in this project:
 > 5. `PUT` `\api\users\{id}`: This is an update endpoint that takes `{id}` as parameter and a `JSON` body which deserializes to a `User` object that will be used to update the user with the given id, returns with status 200, along with the updated user, or throws an exception otherwise.
 
 > 6. `POST` `\api\users\authenticate`: This takes a `LoginDTO`, fetches a user by `email` _(a field in the `LoginDTO`)_, and validates that the `password` _(another field from the `LoginDTO`)_ matches the hashed password of the user fetched. This is an extra endpoint just to show that hashed values of a user password can be compared successfully.
+
+* > **NB: _For simplicity, all exceptions are returned as Response with status `BAD_REQUEST (404)`_**
+  
+_Attached to this repository is a yaml file `(tech11TestEndpoints.yaml)` containing all requests tested on insomnia rest client, you can import this file and test with the already defined use cases._

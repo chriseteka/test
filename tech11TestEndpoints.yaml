@@ -1,0 +1,179 @@
+_type: export
+__export_format: 4
+__export_date: 2021-05-24T18:58:12.595Z
+__export_source: insomnia.desktop.app:v2021.3.0
+resources:
+  - _id: req_82bd629767994b169804331821646e74
+    parentId: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    modified: 1621882438135
+    created: 1621872361012
+    url: "{{ _.baseURL }}"
+    name: CREATE USER
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "firstName": "Chris Ifeanyi",
+          "lastName": "Eteka",
+          "email": "chriseteka@gmail.com",
+          "birthDay": "1997-09-09",
+        	"password": "qwerty"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_95841fa4a4824ec49f6bded572cb6293
+    authentication: {}
+    metaSortKey: -1621872361012
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    parentId: null
+    modified: 1621872033573
+    created: 1621872033573
+    name: TECH11TEST
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_c9c3debdf287452194c174c5d1498046
+    parentId: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    modified: 1621879966797
+    created: 1621872238357
+    url: "{{ _.baseURL }}/1"
+    name: UPDATE USER BY ID
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "firstName": "Chris Ifeanyi",
+          "lastName": "Eteka",
+          "email": "chriseteka@gmail.com",
+          "birthDay": "1997-09-09"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_92ebf04d11b94882b33f7d1cf40b16d8
+    authentication: {}
+    metaSortKey: -1621872238357
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_82b533e6185649b7b84f1a1951aa28f2
+    parentId: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    modified: 1621872080542
+    created: 1621872074184
+    url: "{{ _.baseURL }}"
+    name: ALL USERS
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1621872074184
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_25caddf02dd04e3a9d2496a7ce31bcf2
+    parentId: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    modified: 1621879947428
+    created: 1621872100807
+    url: "{{ _.baseURL }}/1"
+    name: USER BY ID
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1621872074134
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_1e8a8845c646436e8d1b3b98167b935b
+    parentId: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    modified: 1621872220074
+    created: 1621872179563
+    url: "{{ _.baseURL }}/authenticate"
+    name: AUTHENTICATE
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"email": "chriseteka@gmail.com",
+        	"password": "qwerty"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_444c7e9e26774765be63d4f5da252491
+    authentication: {}
+    metaSortKey: -1621872074084
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_842780ef309a742bcb4dcce02d7ff8f734ebbe28
+    parentId: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    modified: 1621872058293
+    created: 1621872033862
+    name: Base Environment
+    data:
+      baseURL: localhost:8080/api/users
+    dataPropertyOrder:
+      "&":
+        - baseURL
+    color: null
+    isPrivate: false
+    metaSortKey: 1621872033862
+    _type: environment
+  - _id: jar_842780ef309a742bcb4dcce02d7ff8f734ebbe28
+    parentId: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    modified: 1621872033864
+    created: 1621872033864
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_8792065f72524d588917c49e294ebb9e
+    parentId: wrk_ffb283595ed7449fae6a86c002ee4fbf
+    modified: 1621872033581
+    created: 1621872033581
+    fileName: TECH11TEST
+    contents: ""
+    contentType: yaml
+    _type: api_spec
